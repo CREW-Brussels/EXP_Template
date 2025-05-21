@@ -1,0 +1,21 @@
+[submodule "Plugins/CHORUS"]
+	path = Plugins/CHORUS
+	url = https://github.com/CREW-Brussels/CHORUS.git
+[submodule "Plugins/CIRCA"]
+	path = Plugins/CIRCA
+	url = https://github.com/CREW-Brussels/CIRCA.git
+[submodule "Plugins/CREWXRFramework"]
+	path = Plugins/CREWXRFramework
+	url = https://github.com/CREW-Brussels/CREWXRFramework.git
+[submodule "Plugins/SPINOSC"]
+	path = Plugins/SPINOSC
+	url = https://github.com/CREW-Brussels/SPINOSC.git
+[submodule "Plugins/CREWNetworkFramework"]
+	path = Plugins/CREWNetworkFramework
+	url = https://github.com/CREW-Brussels/CREWNetworkFramework.git
+[submodule "Plugins/CREWVideoRouter"]
+	path = Plugins/CREWVideoRouter
+	url = https://github.com/CREW-Brussels/CREWVideoRouter.git
+[submodule "Plugins/CREWAnimationUtilities"]
+	path = Plugins/CREWAnimationUtilities
+	url = https://github.com/CREW-Brussels/CREWAnimationUtilities.git

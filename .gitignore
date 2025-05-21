@@ -1,6 +1,11 @@
 # Visual Studio 2015 user specific files
 .vs/
 
+# bla bla
+Plugins/ViveOpenXR/*
+Plugins/VRExpansionPlugin/*
+Plugins/OpenXRExpansionPlugin/*
+
 # Compiled Object files
 *.slo
 *.lo
