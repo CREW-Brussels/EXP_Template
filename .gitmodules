@@ -16,3 +16,6 @@
 [submodule "Plugins/CREWAnimationUtilities"]
 	path = Plugins/CREWAnimationUtilities
 	url = https://github.com/CREW-Brussels/CREWAnimationUtilities.git
+[submodule "Plugins/CREWVideoRouter"]
+	path = Plugins/CREWVideoRouter
+	url = https://github.com/CREW-Brussels/CREWVideoRouter.git
