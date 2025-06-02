@@ -1,5 +1,6 @@
 # EXP Template
-EXP Template is a ready-to-use Unreal Engine 5.3 project, that gathers all of our submodules developed within our EXP Framework, a framework for multiplayer embodied XR experiences.
+EXP Template is a ready-to-use Unreal Engine 5.3 project, that gathers all of our submodules developed within our EXP Framework, a framework for multiplayer embodied XR experiences. Feel free to exploit it and modify it to your ease.
+It's made for Large Area Experiences.
 
 Every asset developped is in the Plugins folder of this template, but you can find how all of the submodules work in details on our [EXP](https://github.com/CREW-Brussels/EXP) page or in our [wiki](https://github.com/CREW-Brussels/EXP/wiki)!
 
@@ -11,6 +12,8 @@ It contains the following submodules developed by CREW:
 - [CREWXRFramework](https://github.com/CREW-Brussels/CREWXRFramework/tree/main)
 - [SPINOSC](https://github.com/CREW-Brussels/SPINOSC/tree/main)
 
+This project is ideal for a performer/Unreal and VR technician duo.
+
 ***
 Requirements:
 - Unreal Engine 5.3
@@ -18,12 +21,23 @@ Requirements:
 - Download the two following plugins in the *Plugins* folder:
   - [Vive Open XR](https://developer.vive.com/resources/openxr/unreal/unreal-download/latest/)
   - [VR Expansion Plugin](https://github.com/mordentral/VRExpansionPlugin/tree/5.3-Locked)
+- Your headset are set up with LBE tracking maps.
 ***
 
 # EXP Template: A full XR performance use case
 
-In this template, you have a already installed multiple immersants and performer experience. In all of this methods, the server (main computer with Unreal Editor), should be in Play mode.
+**In this template, you have a already installed multiple immersants and performer experience.**
 
+The typical demo using this template is the following situation: 
+- A performer in a Motion Capture suit, is wearing a headset with controllers.
+- Different immersants (other VR players) can take part of the experience and observe what the performer is doing.
+- The performer (invisible at first can modify and duplicate its avatar under different triggers and buttons of the controller with [CHORUS animation subsystem](https://github.com/CREW-Brussels/CHORUS/tree/main), developped later.
+
+***
+
+## Set up the server and Gamemode
+
+The server (main computer with Unreal Editor), should be in Play mode.
 >   To make sure that multiplayer works, please make sure in Playmode settings (the three dots on the right of the viewport play buttons), that the **Net Mode** is set to **Play As Listen Server**. This will allow receiving data from the server, and so trackers and other headsets information.
 
 ![68747470733a2f2f74393031323137323438372e702e636c69636b75702d6174746163686d656e74732e636f6d2f74393031323137323438372f61366662376465662d653565382d343431662d623733372d6230653730666661366637362f53637265656e73686f74253230323032342d30392d303625323031323132](https://github.com/user-attachments/assets/c2dba806-dcbd-4974-8f3f-b062a17380a9)
@@ -36,11 +50,12 @@ In this template, you have a already installed multiple immersants and performer
 
 > ![68747470733a2f2f74393031323137323438372e702e636c69636b75702d6174746163686d656e74732e636f6d2f74393031323137323438372f30303562643231632d343562382d343731372d393338662d3031643461336237323539652f53637265656e73686f74253230323032342d30392d303625323031323034](https://github.com/user-attachments/assets/fa36a125-df7f-4a91-8bcb-5e683046822e)
 
+***
 
 ## Set up a multiplayer experience, with multiple clients (the players, meaning the immersants and performer in that case) and a server
 ### Method 1 (easiest): 
 
-The project is already set up with the [CREW Network Framework plugin]((https://github.com/CREW-Brussels/CREWNetworkFramework/tree/main), but you can get to understand more how it works in the documentation.
+The project is already set up with the [CREW Network Framework plugin](https://github.com/CREW-Brussels/CREWNetworkFramework/tree/main), but you can get to understand more how it works in the documentation.
 It will always work as long as all the application name in the settings and ports are the same, and that they are connected on the same network.
 
 
@@ -82,7 +97,10 @@ In embbed on the headsets, the app can't be too heavy.
 In this template, we can't publish the Motion Capture assets as we don't own them. We used a recorded animation sequence, but you could replace it in the ABP_Rebroadcaster.
 ![Screenshot 2025-05-21 165734](https://github.com/user-attachments/assets/72b67a74-fd97-412b-8324-67e47578508b)
 
-Here, since it's the ABP sending the animation data, you can replace the node with a MVN Live Link Pose with a MVN Retargeter and T-Pose (in the case you're using an Xsens suit) or an other node depending on what MOCAP technology you use.
+Here, since it's the ABP sending the animation data, you can replace the node with a MVN Live Link Pose with a MVN Retargeter and T-Pose (in the case you're using an Xsens suit) or an other node depending on what MOCAP technology you use. 
+> In this example, the sent data is received in the ABP_Performer.
+
+***
 
 ### Select the role of your players 
 
@@ -93,6 +111,30 @@ Once you launch the server, in the server editor mode, you able to chose which o
 - click on the button *is performer*. There is also a button *is immersant* but every player is immersant by default.
 
 ***
+
+### CHORUS in this project
+
+In this example, we are uing an echo manager (echos are the iterations triggered by the performer with the left trigger in that case) and crowd manager (crowd is the population of recorded and replayed avatars created by the performer.
+
+The performer has the following buttons (to be checked):
+  - Left Trigger: Launch the echoes
+  - X button: Discard crowd, delete 1 by 1 the crowd avatars of the performer. If the performer was possessing an avatar, it will first make it invisible and then delete the closest crowd avatars.
+  - Y button: Posses the closest avatar, if the performer already posssessing one, it will make them unpocess it.
+  - A button: Record crowd, if the peformer is already possessing an avatar:
+      - 1 clic: Start recording
+      - 2nd clic: Stop recording
+        or
+      - First use the Posses button to unpocess and then play recording 
+  - B button: Spawn Crowd until the maximum of the crowd pool
+  - Right trigger: Change the visibility of the immersants
+
+You are able to modify the settings of the crowd and echoes in the two following blueprints in your scene:
+(PICTURE COMING)
+***
+
+### Archive your experience with CIRCA
+For this, you should follow [CIRCA's documentation](https://github.com/CREW-Brussels/CIRCA/tree/main).
+
 
 ## About
 <img src="https://github.com/user-attachments/assets/2ffa225b-2966-4f68-8106-3fd403fd6988" alt="CREW-LOGO" width="130"/>  
