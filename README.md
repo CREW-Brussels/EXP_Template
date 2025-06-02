@@ -16,7 +16,7 @@ Requirements:
 - Unreal Engine 5.3
 - [Download](https://github.com/CREW-Brussels/SPINOSCgit](https://github.com/CREW-Brussels/EXP_Template)
 - Download the two following plugins in the *Plugins* folder:
-  - [Vive Open XR] (https://developer.vive.com/resources/openxr/unreal/unreal-download/latest/)
+  - [Vive Open XR](https://developer.vive.com/resources/openxr/unreal/unreal-download/latest/)
   - [VR Expansion Plugin](https://github.com/mordentral/VRExpansionPlugin/tree/5.3-Locked)
 ***
 
