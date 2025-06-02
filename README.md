@@ -14,15 +14,83 @@ It contains the following submodules developed by CREW:
 ***
 Requirements:
 - Unreal Engine 5.3
-- [Download](https://github.com/CREW-Brussels/SPINOSCgit](https://github.com/CREW-Brussels/EXP_Template)
+- [Download](https://github.com/CREW-Brussels/EXP_Template)
 - Download the two following plugins in the *Plugins* folder:
   - [Vive Open XR](https://developer.vive.com/resources/openxr/unreal/unreal-download/latest/)
   - [VR Expansion Plugin](https://github.com/mordentral/VRExpansionPlugin/tree/5.3-Locked)
 ***
 
-## EXP Template: A full XR performance use case
+# EXP Template: A full XR performance use case
+
+In this template, you have a already installed multiple immersants and performer experience. In all of this methods, the server (main computer with Unreal Editor), should be in Play mode.
+
+>   To make sure that multiplayer works, please make sure in Playmode settings (the three dots on the right of the viewport play buttons), that the **Net Mode** is set to **Play As Listen Server**. This will allow receiving data from the server, and so trackers and other headsets information.
+
+![68747470733a2f2f74393031323137323438372e702e636c69636b75702d6174746163686d656e74732e636f6d2f74393031323137323438372f61366662376465662d653565382d343431662d623733372d6230653730666661366637362f53637265656e73686f74253230323032342d30392d303625323031323132](https://github.com/user-attachments/assets/c2dba806-dcbd-4974-8f3f-b062a17380a9)
 
 
+
+> You should also check that the Gamemode, by clicking on the blueprint class logo, make sure that the world override is using a gamemode with your VR Player.
+
+>![68747470733a2f2f74393031323137323438372e702e636c69636b75702d6174746163686d656e74732e636f6d2f74393031323137323438372f65396633656164642d636461302d346335612d613636312d3464313236383061343965352f53637265656e73686f74253230323032342d30392d303625323031323035](https://github.com/user-attachments/assets/e8f4ce30-7cf6-4a09-8049-f6f056e7717a)
+
+> ![68747470733a2f2f74393031323137323438372e702e636c69636b75702d6174746163686d656e74732e636f6d2f74393031323137323438372f30303562643231632d343562382d343731372d393338662d3031643461336237323539652f53637265656e73686f74253230323032342d30392d303625323031323034](https://github.com/user-attachments/assets/fa36a125-df7f-4a91-8bcb-5e683046822e)
+
+
+## Set up a multiplayer experience, with multiple clients (the players, meaning the immersants and performer in that case) and a server
+### Method 1 (easiest): 
+
+The project is already set up with the [CREW Network Framework plugin]((https://github.com/CREW-Brussels/CREWNetworkFramework/tree/main), but you can get to understand more how it works in the documentation.
+It will always work as long as all the application name in the settings and ports are the same, and that they are connected on the same network.
+
+
+### Method 2: Building the app and making a local shortcut of your .exe app to allow it launching to your computer and device
+#### Connecting as a client**
+
+*   Platforms➝Windows➝Package project
+*   Once your build is done, click right on the .exe app, and **create a shortcut (right click ➝ more options)**
+*   Add "<serverIP>:17777" at the end of the target of the project shortcut
+
+![](https://t9012172487.p.clickup-attachments.com/t9012172487/a2b9dbdf-4228-426f-8aac-55208c7d83a1/Screenshot%202024-09-06%20122158.png)
+
+*   Open Vive business streaming on your headset
+*   Play on the Viewport button in unreal
+*   Open the shortcut .exe app
+  
+#### Launch a listen server from a package
+to use the unreal editor for something else, while a project is playing
+
+  
+
+*   Platforms➝Windows➝Package project
+*   Once your build is done, click right on the .exe app, and **create a shortcut**
+*   Add "<LevelName>?listen?port=<PortNumber>"
+*   Open Vive business streaming on your headset
+*   Play on the Viewport button in unreal
+*   Open the shortcut .exe app
+
+
+### Method 3: Build an Embbed app for Android 
+There is an already built app for our template, but if you'd like to rebuild one: first install the Android SDK following Unreal's documentation on this topic: https://dev.epicgames.com/documentation/en-us/unreal-engine/how-to-set-up-android-sdk-and-ndk-for-your-unreal-engine-development-environment?application_version=5.3
+
+In embbed on the headsets, the app can't be too heavy.
+
+***
+
+### Send your live animation data 
+
+In this template, we can't publish the Motion Capture assets as we don't own them. We used a recorded animation sequence, but you could replace it in the ABP_Rebroadcaster.
+![Screenshot 2025-05-21 165734](https://github.com/user-attachments/assets/72b67a74-fd97-412b-8324-67e47578508b)
+
+Here, since it's the ABP sending the animation data, you can replace the node with a MVN Live Link Pose with a MVN Retargeter and T-Pose (in the case you're using an Xsens suit) or an other node depending on what MOCAP technology you use.
+
+### Select the role of your players 
+
+Once you launch the server, in the server editor mode, you able to chose which one of the player connected, in our case the person wearing a mocap suit, is the performer.
+(Screenshot coming)
+- Select the performer player in the server editor mode
+- search *role*
+- click on the button *is performer*. There is also a button *is immersant* but every player is immersant by default.
 
 ***
 
