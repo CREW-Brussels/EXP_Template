@@ -20,7 +20,7 @@ Requirements:
   - [VR Expansion Plugin](https://github.com/mordentral/VRExpansionPlugin/tree/5.3-Locked)
 ***
 
-#EXP Template: A full XR performance use case
+## EXP Template: A full XR performance use case
 
 
 
