@@ -1,18 +1,19 @@
 # EXP Template
-EXP Template is a ready-to-use Unreal Engine 5.3 project, that gathers all of our submodules developed within our EXP Framework, a framework for multiplayer embodied XR experiences. Feel free to exploit it and modify it to your ease.
-It's made for Large Area Experiences.
 
-Every asset developped is in the Plugins folder of this template, but you can find how all of the submodules work in details on our [EXP](https://github.com/CREW-Brussels/EXP) page or in our [wiki](https://github.com/CREW-Brussels/EXP/wiki)!
+The EXP Template is a ready-to-use Unreal Engine 5.3 project that contains all of our submodules developed within the EXP Framework, which is designed for multiplayer, embodied XR experiences.
+Feel free to use and experiment with it!
 
-It contains the following submodules developed by CREW:
+This project is ideal for LBX (Large-Base Experiences). It is perfect for a performer and a Unreal/VR technician duo.
+
+All of the assets developped here are in the Plugins folder of this template. For more details on how all of the submodules work, visit our [EXP](https://github.com/CREW-Brussels/EXP) page or our [wiki](https://github.com/CREW-Brussels/EXP/wiki)!
+
+EXP_Template contains the following submodules developed by CREW:
 - [CHORUS](https://github.com/CREW-Brussels/CHORUS/tree/main)
 - [CIRCA](https://github.com/CREW-Brussels/CIRCA/tree/main)
 - [CREWAnimationUtilities](https://github.com/CREW-Brussels/CREWAnimationUtilities/tree/main)
 - [CREWNetworkFramework](https://github.com/CREW-Brussels/CREWNetworkFramework/tree/main)
 - [CREWXRFramework](https://github.com/CREW-Brussels/CREWXRFramework/tree/main)
 - [SPINOSC](https://github.com/CREW-Brussels/SPINOSC/tree/main)
-
-This project is ideal for a performer/Unreal and VR technician duo.
 
 ***
 Requirements:
@@ -21,17 +22,17 @@ Requirements:
 - Download the two following plugins in the *Plugins* folder:
   - [Vive Open XR](https://developer.vive.com/resources/openxr/unreal/unreal-download/latest/)
   - [VR Expansion Plugin](https://github.com/mordentral/VRExpansionPlugin/tree/5.3-Locked)
-- Your headset are set up with LBE tracking maps.
+- Your headsets are set up with LBE tracking maps.
 ***
 
 # EXP Template: A full XR performance use case
 
-**In this template, you have a already installed multiple immersants and performer experience.**
+**This project comes with a multiplayer demo, with 1 performer and multiple immersants**
 
-The typical demo using this template is the following situation: 
-- A performer in a Motion Capture suit, is wearing a headset with controllers.
-- Different immersants (other VR players) can take part of the experience and observe what the performer is doing.
-- The performer (invisible at first can modify and duplicate its avatar under different triggers and buttons of the controller with [CHORUS animation subsystem](https://github.com/CREW-Brussels/CHORUS/tree/main), developped later.
+A typical demo using this template involves the following situation:
+- A performer wearing a motion capture suit and a headset with controllers.
+- Other VR players (immersants) can participate in the experience and observe the performer.
+- The performer, who is invisible at first, can modify and duplicate their avatar with different triggers and buttons on the controller using the [CHORUS animation subsystem](https://github.com/CREW-Brussels/CHORUS/tree/main) (developed later).
 
 ***
 
@@ -75,8 +76,6 @@ It will always work as long as all the application name in the settings and port
 #### Launch a listen server from a package
 to use the unreal editor for something else, while a project is playing
 
-  
-
 *   Platforms➝Windows➝Package project
 *   Once your build is done, click right on the .exe app, and **create a shortcut**
 *   Add "<LevelName>?listen?port=<PortNumber>"
@@ -105,7 +104,7 @@ Here, since it's the ABP sending the animation data, you can replace the node wi
 ### Select the role of your players 
 
 Once you launch the server, in the server editor mode, you able to chose which one of the player connected, in our case the person wearing a mocap suit, is the performer.
-(Screenshot coming)
+
 - Select the performer player in the server editor mode
 - search *role*
 - click on the button *is performer*. There is also a button *is immersant* but every player is immersant by default.
