@@ -107,11 +107,8 @@ Here, since it's the ABP sending the animation data, you can replace the node wi
 ### Select the role of your players 
 
 Once you launch the server, in the server editor mode, you able to chose which one of the player connected, in our case the person wearing a mocap suit, is the performer.
-
-- Select the performer player in the server editor mode. The VR Player 0 is the server by default. 
-
 ![Screenshot 2025-06-02 175101](https://github.com/user-attachments/assets/9773dc09-386b-4504-81f1-1ed1b1ab1a96)
-
+- Select the performer player in the server editor mode. The VR Player 0 is the server by default. 
 - search *role*
 - click on the button *is performer*. There is also a button *is immersant* but every player is immersant by default.
 ![Screenshot 2025-06-05 121744](https://github.com/user-attachments/assets/b97f044d-43e4-4dec-8e86-a19354b04923)
