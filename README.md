@@ -61,7 +61,7 @@ It will always work as long as all the application name in the settings and port
 
 
 ### Method 2: Building the app and making a local shortcut of your .exe app to allow it launching to your computer and device
-#### Connecting as a client**
+#### Connecting as a client
 
 *   Platforms➝Windows➝Package project
 *   Once your build is done, click right on the .exe app, and **create a shortcut (right click ➝ more options)**
@@ -85,6 +85,7 @@ to use the unreal editor for something else, while a project is playing
 
 
 ### Method 3: Build an Embbed app for Android 
+
 Package an app with Android ASTC: 
 - first install the Android SDK following Unreal's documentation on this topic: https://dev.epicgames.com/documentation/en-us/unreal-engine/how-to-set-up-android-sdk-and-ndk-for-your-unreal-engine-development-environment?application_version=5.3
 - Package your app. If there any errors try the following steps: kill all of your Unreal Editors in the Task Manager, delete the *Intermediate* folder in your project, open the project again and try to rebuild it.
@@ -107,9 +108,13 @@ Here, since it's the ABP sending the animation data, you can replace the node wi
 
 Once you launch the server, in the server editor mode, you able to chose which one of the player connected, in our case the person wearing a mocap suit, is the performer.
 
-- Select the performer player in the server editor mode
+- Select the performer player in the server editor mode. The VR Player 0 is the server by default. 
+
+![Screenshot 2025-06-02 175101](https://github.com/user-attachments/assets/9773dc09-386b-4504-81f1-1ed1b1ab1a96)
+
 - search *role*
 - click on the button *is performer*. There is also a button *is immersant* but every player is immersant by default.
+![Screenshot 2025-06-05 121744](https://github.com/user-attachments/assets/b97f044d-43e4-4dec-8e86-a19354b04923)
 
 ***
 
