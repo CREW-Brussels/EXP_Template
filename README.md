@@ -114,22 +114,34 @@ Once you launch the server, in the server editor mode, you able to chose which o
 
 ### CHORUS in this project
 
-In this example, we are uing an echo manager (echos are the iterations triggered by the performer with the left trigger in that case) and crowd manager (crowd is the population of recorded and replayed avatars created by the performer.
+In this example, we are uing an echo manager (echos are the iterations triggered by the performer with the left trigger in that case) and crowd manager (crowd is the population of recorded and replayed avatars created by the performer).
+Always make sure the Bluprint of your perforer is linked to the following blueprints from Chorus like on the picture: BP_ChorusEchoManager and BP_ChorusCrowdManager. Otherwise the performer's tools won't work.
+![Screenshot 2025-06-02 175002](https://github.com/user-attachments/assets/75d2a12e-dea9-41a0-a863-0d2ae74b935d)
 
-The performer has the following buttons (to be checked):
-  - Left Trigger: Launch the echoes
-  - X button: Discard crowd, delete 1 by 1 the crowd avatars of the performer. If the performer was possessing an avatar, it will first make it invisible and then delete the closest crowd avatars.
-  - Y button: Posses the closest avatar, if the performer already posssessing one, it will make them unpocess it.
-  - A button: Record crowd, if the peformer is already possessing an avatar:
+You are able to modify the settings of the crowd and echoes with BP_ChorusEchoManager and BP_ChorusCrowdManager that are in your scene. The pool size is the number of avatars that will be generated either for the echoes or the crowd. 
+
+![Screenshot 2025-06-02 175026](https://github.com/user-attachments/assets/b7737ee0-934c-41f7-bdd3-e8a0199d268f)
+
+![Screenshot 2025-06-02 175042](https://github.com/user-attachments/assets/9778c45b-bd5c-4627-9b54-5279709303c6)
+
+The performer has the following buttons:
+  - Right Trigger: Launch and unlaunch the echoes
+  - A button: Posses the closest crowd avatar. If the performer is already posssessing one, it will make them unpocess it.
+  - B button: Record crowd. If the peformer is already possessing an avatar:
       - 1 clic: Start recording
       - 2nd clic: Stop recording
         or
       - First use the Posses button to unpocess and then play recording 
-  - B button: Spawn Crowd until the maximum of the crowd pool
-  - Right trigger: Change the visibility of the immersants
+  - X button: Spawn Crowd until the maximum capacity of the crowd pool
+  - Y button: Discard crowd, delete 1 by 1 the crowd avatars of the performer. If the performer was possessing an avatar, it will first make it invisible and then delete the closest crowd avatars.
+  - Right thumbstick up: Increase the speed of your last recording
+  - Right thumbstick down (or left thumbsitck for Cosmos and Focus3 controllers): Decrease speed of your last recording
+  - Right trigger: Change the visibility of the immersants. They will however still see each other at a minimum distance, so they don't bump into each other. The performer will always see them but the mesh will look different when the immersants are unvisible to one another.
+ 
+![Screenshot 2025-06-02 175218](https://github.com/user-attachments/assets/e52b868d-5bd4-447b-8f97-8c7df875cb13)
 
-You are able to modify the settings of the crowd and echoes in the two following blueprints in your scene:
-(PICTURE COMING)
+![Screenshot 2025-06-02 175250](https://github.com/user-attachments/assets/f2099e49-280f-4828-85e7-064592e0f96a)
+
 ***
 
 ### Archive your experience with CIRCA
