@@ -85,9 +85,11 @@ to use the unreal editor for something else, while a project is playing
 
 
 ### Method 3: Build an Embbed app for Android 
-There is an already built app for our template, but if you'd like to rebuild one: first install the Android SDK following Unreal's documentation on this topic: https://dev.epicgames.com/documentation/en-us/unreal-engine/how-to-set-up-android-sdk-and-ndk-for-your-unreal-engine-development-environment?application_version=5.3
+Package an app with Android ASTC: 
+- first install the Android SDK following Unreal's documentation on this topic: https://dev.epicgames.com/documentation/en-us/unreal-engine/how-to-set-up-android-sdk-and-ndk-for-your-unreal-engine-development-environment?application_version=5.3
+- Package your app. If there any errors try the following steps: kill all of your Unreal Editors in the Task Manager, delete the *Intermediate* folder in your project, open the project again and try to rebuild it.
 
-In embbed on the headsets, the app can't be too heavy.
+In embbed on the headsets, the app can't be too heavy. 
 
 ***
 
