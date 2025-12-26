@@ -41,7 +41,8 @@ A typical demo using this template involves the following situation:
 The server (main computer with Unreal Editor), should be in Play mode.
 >   To make sure that multiplayer works, please make sure in Playmode settings (the three dots on the right of the viewport play buttons), that the **Net Mode** is set to **Play As Listen Server**. This will allow receiving data from the server, and so trackers and other headsets information.
 
-![68747470733a2f2f74393031323137323438372e702e636c69636b75702d6174746163686d656e74732e636f6d2f74393031323137323438372f61366662376465662d653565382d343431662d623733372d6230653730666661366637362f53637265656e73686f74253230323032342d30392d303625323031323132](https://github.com/user-attachments/assets/c2dba806-dcbd-4974-8f3f-b062a17380a9)
+
+<img width="560" height="498" alt="450224081-c2dba806-dcbd-4974-8f3f-b062a17380a9" src="https://github.com/user-attachments/assets/9da00166-1ab8-4d09-884b-d7f702d3f0e6" />
 
 
 
