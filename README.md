@@ -127,9 +127,10 @@ Always make sure the Bluprint of your perforer is linked to the following bluepr
 
 You are able to modify the settings of the crowd and echoes with BP_ChorusEchoManager and BP_ChorusCrowdManager that are in your scene. The pool size is the number of avatars that will be generated either for the echoes or the crowd. 
 
-![Screenshot 2025-06-02 175026](https://github.com/user-attachments/assets/b7737ee0-934c-41f7-bdd3-e8a0199d268f)
+<img width="1909" height="1099" alt="451807162-b7737ee0-934c-41f7-bdd3-e8a0199d268f" src="https://github.com/user-attachments/assets/4fc5153a-e584-4728-8c39-4f0d5103cf4d" />
 
-![Screenshot 2025-06-02 175042](https://github.com/user-attachments/assets/9778c45b-bd5c-4627-9b54-5279709303c6)
+<img width="1918" height="1108" alt="451807200-9778c45b-bd5c-4627-9b54-5279709303c6" src="https://github.com/user-attachments/assets/eddc94fc-2eb5-4853-8e3d-f72a691f35f1" />
+
 
 The performer has the following buttons:
   - Right Trigger: Launch and unlaunch the echoes
@@ -145,9 +146,10 @@ The performer has the following buttons:
   - Right thumbstick down (or left thumbsitck for Cosmos and Focus3 controllers): Decrease speed of your last recording
   - Right trigger: Change the visibility of the immersants. They will however still see each other at a minimum distance, so they don't bump into each other. The performer will always see them but the mesh will look different when the immersants are unvisible to one another.
  
-![Screenshot 2025-06-02 175218](https://github.com/user-attachments/assets/e52b868d-5bd4-447b-8f97-8c7df875cb13)
+<img width="1651" height="598" alt="451789063-e52b868d-5bd4-447b-8f97-8c7df875cb13" src="https://github.com/user-attachments/assets/03662ec7-e2f9-44f8-a579-5a03ddc6280d" />
 
-![Screenshot 2025-06-02 175250](https://github.com/user-attachments/assets/f2099e49-280f-4828-85e7-064592e0f96a)
+<img width="1648" height="542" alt="451789136-f2099e49-280f-4828-85e7-064592e0f96a" src="https://github.com/user-attachments/assets/aae283e3-b99b-47cb-a451-d42b3bdbfb8c" />
+
 
 ***
 
