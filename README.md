@@ -42,15 +42,15 @@ The server (main computer with Unreal Editor), should be in Play mode.
 >   To make sure that multiplayer works, please make sure in Playmode settings (the three dots on the right of the viewport play buttons), that the **Net Mode** is set to **Play As Listen Server**. This will allow receiving data from the server, and so trackers and other headsets information.
 
 
-<img width="560" height="498" alt="450224081-c2dba806-dcbd-4974-8f3f-b062a17380a9" src="https://github.com/user-attachments/assets/9da00166-1ab8-4d09-884b-d7f702d3f0e6" />
+> <img width="560" height="498" alt="450224081-c2dba806-dcbd-4974-8f3f-b062a17380a9" src="https://github.com/user-attachments/assets/9da00166-1ab8-4d09-884b-d7f702d3f0e6" />
 
 
 
 > You should also check that the Gamemode, by clicking on the blueprint class logo, make sure that the world override is using a gamemode with your VR Player.
 
->![68747470733a2f2f74393031323137323438372e702e636c69636b75702d6174746163686d656e74732e636f6d2f74393031323137323438372f65396633656164642d636461302d346335612d613636312d3464313236383061343965352f53637265656e73686f74253230323032342d30392d303625323031323035](https://github.com/user-attachments/assets/e8f4ce30-7cf6-4a09-8049-f6f056e7717a)
+> <img width="51" height="42" alt="450228039-e8f4ce30-7cf6-4a09-8049-f6f056e7717a" src="https://github.com/user-attachments/assets/d800348c-936d-41df-9c96-84641c216694" />
 
-> ![68747470733a2f2f74393031323137323438372e702e636c69636b75702d6174746163686d656e74732e636f6d2f74393031323137323438372f30303562643231632d343562382d343731372d393338662d3031643461336237323539652f53637265656e73686f74253230323032342d30392d303625323031323034](https://github.com/user-attachments/assets/fa36a125-df7f-4a91-8bcb-5e683046822e)
+> <img width="579" height="40" alt="450228006-fa36a125-df7f-4a91-8bcb-5e683046822e" src="https://github.com/user-attachments/assets/a42f3680-6223-473c-b406-ea57afaa3f37" />
 
 ***
 
@@ -108,11 +108,13 @@ Here, since it's the ABP sending the animation data, you can replace the node wi
 ### Select the role of your players 
 
 Once you launch the server, in the server editor mode, you able to chose which one of the player connected, in our case the person wearing a mocap suit, is the performer.
-![Screenshot 2025-06-02 175101](https://github.com/user-attachments/assets/9773dc09-386b-4504-81f1-1ed1b1ab1a96)
+<img width="1907" height="1119" alt="451834925-9773dc09-386b-4504-81f1-1ed1b1ab1a96" src="https://github.com/user-attachments/assets/ccc8f501-f760-495a-abec-1400c553c35b"/>
+
 - Select the performer player in the server editor mode. The VR Player 0 is the server by default. 
 - search *role*
 - click on the button *is performer*. There is also a button *is immersant* but every player is immersant by default.
-![Screenshot 2025-06-05 121744](https://github.com/user-attachments/assets/b97f044d-43e4-4dec-8e86-a19354b04923)
+<img width="1908" height="1149" alt="451834705-b97f044d-43e4-4dec-8e86-a19354b04923" src="https://github.com/user-attachments/assets/2a93b728-2d54-4f26-9d2b-61f9de676599" />
+
 
 ***
 
@@ -120,7 +122,8 @@ Once you launch the server, in the server editor mode, you able to chose which o
 
 In this example, we are uing an echo manager (echos are the iterations triggered by the performer with the left trigger in that case) and crowd manager (crowd is the population of recorded and replayed avatars created by the performer).
 Always make sure the Bluprint of your perforer is linked to the following blueprints from Chorus like on the picture: BP_ChorusEchoManager and BP_ChorusCrowdManager. Otherwise the performer's tools won't work.
-![Screenshot 2025-06-02 175002](https://github.com/user-attachments/assets/75d2a12e-dea9-41a0-a863-0d2ae74b935d)
+<img width="1890" height="1113" alt="451806795-75d2a12e-dea9-41a0-a863-0d2ae74b935d" src="https://github.com/user-attachments/assets/797c79a1-e672-4481-a086-d39cfaa5c932"/>
+
 
 You are able to modify the settings of the crowd and echoes with BP_ChorusEchoManager and BP_ChorusCrowdManager that are in your scene. The pool size is the number of avatars that will be generated either for the echoes or the crowd. 
 
