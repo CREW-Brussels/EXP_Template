@@ -12,7 +12,7 @@ EXP_Template contains the following submodules developed by CREW:
 - [CIRCA](https://github.com/CREW-Brussels/CIRCA/tree/main)
 - [CREWAnimationUtilities](https://github.com/CREW-Brussels/CREWAnimationUtilities/tree/main)
 - [CREWNetworkUtilities](https://github.com/CREW-Brussels/CREWNetworkUtilities/tree/main)
-- [CREWXRUtilities](https://github.com/CREW-Brussels/CREWXRUtilities/tree/main)
+- [CREWXRUtilities](https://github.com/CREW-Brussels/CREWXRUtilities)
 - [SPINOSC](https://github.com/CREW-Brussels/SPINOSC/tree/main)
 
 ***
