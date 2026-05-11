@@ -17,13 +17,16 @@ EXP_Template contains the following submodules developed by CREW:
 
 ***
 Requirements:
-- Unreal Engine 5.3
+- Unreal Engine 5.7
 - [Download](https://github.com/CREW-Brussels/EXP_Template)
-- Download the two following plugins in the *Plugins* folder:
-  - [Vive Open XR](https://developer.vive.com/resources/openxr/unreal/unreal-download/latest/)
-  - [VR Expansion Plugin](https://github.com/mordentral/VRExpansionPlugin/tree/5.3-Locked)
+- Install VRExpansionPlugin in the *Plugins* folder:
+  - [VR Expansion Plugin @ commit a1b834f](https://github.com/mordentral/VRExpansionPlugin/tree/5.7-Preview)
 - Your headsets are set up with LBE tracking maps.
 ***
+
+# Changes since 5.3
+
+In May 2026, EXP Template was updated directly from UE5.3 to UE5.7. The biggest changes is the removal of the VIVEOpenXR plug-in. As a result hand-tracking implementations have been removed for now while a more general approach is reserached. Interim UE versions between 5.3 and 5.7 likely will work but have not been vetted.
 
 # EXP Template: A full XR performance use case
 
