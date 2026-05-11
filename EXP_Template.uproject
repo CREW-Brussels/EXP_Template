@@ -29,6 +29,10 @@
 		{
 			"Name": "CREWXRFramework",
 			"Enabled": false
+		},
+		{
+			"Name": "CREWXRUtilities",
+			"Enabled": false
 		}
 	]
 }
