@@ -32,7 +32,7 @@
 		},
 		{
 			"Name": "CREWXRUtilities",
-			"Enabled": false
+			"Enabled": true
 		}
 	]
 }
